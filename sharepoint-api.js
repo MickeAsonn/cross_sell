@@ -1,1 +1,1 @@
-// sharepoint api placeholder
+// sharepoint placeholder

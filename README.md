@@ -1,2 +1,1 @@
-# Account Plan App
-Placeholder project.
+# Fixed version with visible content.
