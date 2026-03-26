@@ -1,1 +1,33 @@
-body{background:#F6F6F6;}h1{border-left:10px solid #FFC900;color:#010C12;}
+
+:root {
+  --stibo-yellow: #FFC900;
+  --stibo-light: #F6F6F6;
+  --stibo-dark: #010C12;
+}
+body {
+  font-family: Arial;
+  background: var(--stibo-light);
+  padding: 20px;
+  color: var(--stibo-dark);
+}
+h1 {
+  border-left: 10px solid var(--stibo-yellow);
+  padding-left: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+input, textarea {
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  background: var(--stibo-yellow);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
