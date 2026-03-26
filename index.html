@@ -1,17 +1,15 @@
-
 <!DOCTYPE html><html lang='sv'><head><meta charset='UTF-8'>
-<title>Account Plan Advanced</title>
+<title>Account Plan Dropdown</title>
 <link rel='stylesheet' href='styles.css'>
 <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js'></script>
 </head>
 <body onload='checkLogin()'>
-<div id='loginBox' class='hidden'>
+<div id='loginBox'>
 <h2>Login</h2>
 <input id='user' placeholder='Användare'><br>
 <input id='pass' type='password' placeholder='Lösenord'><br>
-<button onclick='login()'>Login</button>
-</div>
+<button onclick='login()'>Login</button></div>
 <div id='app' class='hidden'>
 <h1>Cross Selling Account Plan</h1>
 <input id='search' placeholder='Sök...' onkeyup='filterEntries()'>
@@ -27,16 +25,27 @@
 <input name='IB' placeholder='Salgsansvarlig IB'>
 <input name='GP' placeholder='Salgsansvarlig GP'>
 <input name='Media' placeholder='Salgsansvarlig Media'>
-<h2>Tal</h2>
-<input type='number' name='Omsætning' placeholder='Omsætning'>
-<input type='number' name='TotalPotential' placeholder='Potentiale år DKK'>
-<input type='number' name='Budget' placeholder='Budget år DKK'>
-<input type='number' name='Realiseret' placeholder='Realiseret år DKK'>
-<h2>Produktområden</h2>
-<div id='prod'></div>
+<h2>Produktområde</h2>
+<select id='prodSelect' name='Produktområde'>
+<option value='Web offset'>Web offset</option>
+<option value='POS'>POS</option>
+<option value='Sheetfed'>Sheetfed</option>
+<option value='Digital print'>Digital print</option>
+<option value='Media'>Media</option>
+<option value='Storage/logistic'>Storage/logistic</option>
+<option value='Distribution'>Distribution</option>
+<option value='Portal'>Portal</option>
+<option value='Packaging'>Packaging</option>
+<option value='Event & Expo'>Event & Expo</option>
+<option value='In-store communication'>In-store communication</option>
+<option value='In-store installation'>In-store installation</option>
+<option value='Out-door installation'>Out-door installation</option>
+<option value='Other'>Other</option>
+</select>
+<input type='number' name='ProductPotential' placeholder='Potential DKK'>
 <h2>Aktiviteter</h2>
 <input type='date' name='ActivityDate'>
-<textarea name='ActivityDescription' placeholder='Beskrivning'></textarea>
+<textarea name='ActivityDescription'></textarea>
 <button type='button' onclick='saveEntry()'>Spara</button>
 </form>
 <h2>Dashboard</h2>
@@ -47,5 +56,4 @@
 </div>
 <script src='app.js'></script>
 <script src='login.js'></script>
-<script src='sharepoint.js'></script>
 </body></html>

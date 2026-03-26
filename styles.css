@@ -1,7 +1,1 @@
-
-.hidden{display:none}
-body{font-family:Arial;background:#F6F6F6;color:#010C12;padding:20px}
-h1{border-left:10px solid #FFC900;padding-left:10px}
-input,textarea{display:block;margin:5px 0;padding:6px;width:300px}
-#prod div{margin:4px 0}
-table,td,th{border:1px solid #333;border-collapse:collapse;padding:4px}
+:root {--stibo-yellow:#FFC900;--stibo-light:#F6F6F6;--stibo-dark:#010C12;} .hidden{display:none} body{font-family:Arial;background:var(--stibo-light);color:var(--stibo-dark);padding:20px} h1{border-left:10px solid var(--stibo-yellow);padding-left:10px} input,textarea,select{display:block;margin:5px 0;padding:6px;width:300px} table,td,th{border:1px solid #333;border-collapse:collapse;padding:4px}
