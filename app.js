@@ -1,1 +1,7 @@
-function save(){alert('Sparat!');}
+
+let entries=[];
+function saveEntry(){let f=new FormData(document.querySelector('#form'));let o={};f.forEach((v,k)=>o[k]=v);entries.push(o);renderTable();renderChart();}
+function renderTable(){let t=document.getElementById('tbl');t.innerHTML=''; if(entries.length==0)return; let h=Object.keys(entries[0]); t.innerHTML+='<tr>'+h.map(x=>`<th>${x}</th>`).join('')+'</tr>'; entries.forEach(r=>{t.innerHTML+='<tr>'+h.map(k=>`<td>${r[k]||''}</td>`).join('')+'</tr>'})}
+function renderChart(){let ctx=document.getElementById('revChart');let labels=entries.map(e=>e.Kundenavn);let data=entries.map(e=>Number(e.ProductPotential||0)); new Chart(ctx,{type:'bar',data:{labels,datasets:[{label:'Potential',data,backgroundColor:'#FFC900'}]}})}
+function filterEntries(){let v=document.getElementById('search').value.toLowerCase(); let f=entries.filter(e=>JSON.stringify(e).toLowerCase().includes(v)); renderTable(f);}
+function exportExcel(){let ws=XLSX.utils.json_to_sheet(entries); let wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,ws,'Data'); XLSX.writeFile(wb,'kunddata.xlsx');}
