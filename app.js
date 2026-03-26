@@ -1,2 +1,1 @@
-
-function save(){ alert('Formulär sparat (demo)!'); }
+function save(){alert('Sparat!');}
