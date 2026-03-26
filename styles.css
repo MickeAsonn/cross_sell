@@ -1,1 +1,7 @@
-:root {--stibo-yellow:#FFC900;--stibo-light:#F6F6F6;--stibo-dark:#010C12;}body{font-family:Arial;background:var(--stibo-light);padding:30px;color:var(--stibo-dark);}h1{border-left:12px solid var(--stibo-yellow);padding-left:12px;font-size:28px;}h2{margin-top:30px;}label{font-weight:bold;display:block;margin-top:10px;}input,textarea{width:280px;padding:7px;border:1px solid #ccc;margin-top:3px;}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}button{background:var(--stibo-yellow);border:none;padding:14px 22px;margin-top:20px;cursor:pointer;font-weight:bold;color:var(--stibo-dark);}
+
+.hidden{display:none}
+body{font-family:Arial;background:#F6F6F6;color:#010C12;padding:20px}
+h1{border-left:10px solid #FFC900;padding-left:10px}
+input,textarea{display:block;margin:5px 0;padding:6px;width:300px}
+#prod div{margin:4px 0}
+table,td,th{border:1px solid #333;border-collapse:collapse;padding:4px}

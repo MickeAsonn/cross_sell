@@ -1,1 +1,3 @@
-// login placeholder
+
+async function login(){let u=document.getElementById('user').value;let p=document.getElementById('pass').value;let j=await fetch('data/users.json').then(r=>r.json());let f=j.find(x=>x.user==u&&x.pass==p);if(!f){alert('Fel login');return;}sessionStorage.setItem('u',u);document.getElementById('loginBox').classList.add('hidden');document.getElementById('app').classList.remove('hidden')}
+function checkLogin(){if(!sessionStorage.getItem('u')){document.getElementById('loginBox').classList.remove('hidden');document.getElementById('app').classList.add('hidden')}}
