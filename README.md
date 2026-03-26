@@ -1,1 +1,1 @@
-# Fixed version with visible content.
+# Full form version matching Excel.
